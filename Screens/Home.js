@@ -5,10 +5,9 @@ import BottomTabs from '../Components/BottomTabs';
 import Categories from '../Components/Categories';
 import HeaderTabs from '../Components/HeaderTabs';
 import RestaurantItem, {localRestaurants} from '../Components/RestaurantItem';
-import {YELP_API_KEY_PATH, YELP_API_KEY_V1} from '@env';
+import {YELP_API_KEY_V1} from '@env';
 import SearchBar from '../Components/SearchBar';
-const YELP_API_KEY =
-  '-CQ0xITVu6UXGUbLP4_OmS8Rt9u0XfkeEdVYnv3abksjR0v8o_ou2gaIJSVDldfg2N8GFKz0c6QHWVIOxcleFHVt2wMGdih1M-zaZ8HYAABUzPYpx96piK-HCHngYXYx';
+const YELP_API_KEY = `${process.env.YELP_API_KEY_V1}`;
 export default function Home({navigation}) {
   const [restaurantData, setRestaurantData] = useState(localRestaurants);
   const [city, setCity] = useState('San Francisco');

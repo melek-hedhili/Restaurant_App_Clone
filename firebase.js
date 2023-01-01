@@ -6,13 +6,13 @@ import {initializeFirestore} from 'firebase/firestore';
 //import firebase realtime database from firebase
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAh7YjR_uk7AjA0CGMYwCvfPwLsvV0Jwgs',
-  authDomain: 'shopping-d7169.firebaseapp.com',
-  projectId: 'shopping-d7169',
-  storageBucket: 'shopping-d7169.appspot.com',
-  messagingSenderId: '99507407547',
-  appId: '1:99507407547:web:cf73c23ef1a7783123f79e',
-  measurementId: 'G-93RGDK0GRX',
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MESUREMENT_ID,
 };
 const app = initializeApp(firebaseConfig);
 
